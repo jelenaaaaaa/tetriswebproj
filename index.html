@@ -2,10 +2,10 @@
 <head>
     <title>Tetris Game JS</title>
     <style>
-        #score{
+        #score,#level{
             display: inline-block;
         }
-        div{
+        .scoreLook{
             font-size: 25px;
             font-weight: bold;
             font-family: monospace;
@@ -15,15 +15,83 @@
             display: block;
             margin:0 auto;
         }
+        button,#startbutton{
+            background-color: black;
+            color: white;
+            border: none;
+            bottom: 0;
+            height: 40px;
+            font-size: 12pt;
+            width: 90px;
+            alignment: center;
+        }
+        button:hover{
+            background-color: #0000ff;
+        }
+        #startbutton:hover{
+            background-color: #f00;
+        }
+        #dataLook{
+            text-align: center;
+        }
+        #hiddenbutton
+        {
+            visibility: hidden;
+            display: block;
+        }
     </style>
 </head>
 <body>
-<div>Tetris</div><br>
+<div class="scoreLook">Tetris</div><br>
 <canvas id="tetris" width="200" height="400"></canvas>
-<div>
+
+<div class="scoreLook">
     Score : <div id="score">0</div>
+    <br>
+    Level: <div id="level">1</div>
+    <br><br>
+    <input type="button" name="startbtn" id="startbutton" value="START" onclick="drop()">
 </div>
+
+
+<div id="dataLook">
+<br>
+<label>Show top 5 scores:<br><br></label>
+<button id="showbutton">Show</button>
+<button id="clearbutton1" style="margin-left: 20px" onclick="clearData1()">Hide</button>
+
+<br><br>
+
+<div id="showScores"></div>
+<br>
+
+<label>Recent players:<br><br></label>
+<button id="showbuttonlast">Show</button>
+<button id="clearbutton2" style="margin-left: 20px" onclick="clearData2()">Hide</button>
+
+<br><br>
+
+<div id="showScoresLast"></div>
+
+<br>
+
+<div id="hiddenbutton">
+    <button id="rememberbutton" onclick="insertData()">Remember me!</button>
+</div>
+
+<div id="showAllScores"></div>
+</div>
+
+<div style="margin: 0 auto;display: table;">
+<audio controls loop style="">
+    <source src="Tetris.ogg" type="audio/ogg">
+    <source src="Tetris.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+</div>
+
 <script src="tetrominoes.js"></script>
 <script src="tetris.js"></script>
+<script src="ajax.js"></script>
 </body>
 </html>
