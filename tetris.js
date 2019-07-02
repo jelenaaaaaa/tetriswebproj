@@ -105,7 +105,7 @@ Piece.prototype.unDraw = function(){
 
 
 
-//move the piece right
+//move Down the piece
 
 Piece.prototype.moveDown = function(){
     if(!this.collision(0,1,this.activeTetromino)){
@@ -118,7 +118,7 @@ Piece.prototype.moveDown = function(){
     }
 };
 
-//move the piece down
+//move the piece right
 
 Piece.prototype.moveRight = function(){
     if(!this.collision(1,0,this.activeTetromino)) {
@@ -186,10 +186,15 @@ Piece.prototype.lock = function(){
                 }
                 else{
                     window.confirmName=confirm("This is your username: "+name+
-                        "This is your score: " +score);
+                        "\n This is your score: " +score+"\n This is your level: " +level);
                 }
                 window.getScore=score;
                 document.cookie=getScore;
+
+               /*
+                window.getLevel=level;
+                document.cookie1=getLevel;
+                */
 
                 if(confirmName==true)
                 {
