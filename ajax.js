@@ -76,5 +76,5 @@ function clearData1() //functions for clearing out the divs
 function clearData2()
 {
     document.getElementById('showScoresLast').innerHTML = "";
-    //document.getElementById('showLevelsLast').innerHTML = "";
+    // document.getElementById('showLevelsLast').innerHTML = "";
 }
