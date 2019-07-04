@@ -191,10 +191,7 @@ Piece.prototype.lock = function(){
                 window.getScore=score;
                 document.cookie=getScore;
 
-               /*
-                window.getLevel=level;
-                document.cookie1=getLevel;
-                */
+               
 
                 if(confirmName==true)
                 {
