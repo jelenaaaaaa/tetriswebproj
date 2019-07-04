@@ -19,7 +19,7 @@ if(!empty($name))
 {
     $sql = "INSERT INTO userdata(username,score,datetime) VALUES ('$name','$score',CURRENT_TIME)";
         /*
-         When level is included in the database:
+        When level is included in the database:
 
         $sql = "INSERT INTO userdata(username,score,datetime,level) VALUES ('$name','$score',CURRENT_TIME,'$level')";
 
