@@ -5,7 +5,7 @@ $sql = "";
 $sqls[1] = "SELECT * FROM userdata ORDER BY score DESC LIMIT 5";
 
 /*
- When level is included in the database:
+When level is included in the database:
 $sqls[1] = "SELECT * FROM userdata ORDER BY score,level DESC LIMIT 5";
  */
 
