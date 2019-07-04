@@ -9,7 +9,7 @@ const SQ=squareSize=20;
 const VACANT="WHITE";
 
 
-//draw a square
+// draw a square
 
 function drawSquare(x,y,color){
     ctx.fillStyle=color;
@@ -29,7 +29,7 @@ for(var r=0;r<ROW;r++){
     }
 }
 
-//draw the board
+// draw the board
 
 function drawBoard(){
     for(var r=0;r<ROW;r++){
